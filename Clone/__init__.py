@@ -1,6 +1,8 @@
 import os
 import logging
 from pyrogram import Client
+import time
+
 
 FORMAT = "[Cloner]: %(message)s"
 
@@ -9,6 +11,9 @@ logging.basicConfig(level=logging.INFO, handlers=[logging.FileHandler('logs.txt'
 
 # Set up logging
 logger = logging.getLogger(__name__)
+
+# For Ping Cmd
+StartTime = time.time()
 
 
 # Set up bot configurations
