@@ -1,6 +1,6 @@
 # Pyrogram Clone Client Example
 
-__This is just an example of a clone client in Pyrogram.__
+𝗧𝗵𝗶𝘀 𝗶𝘀 𝗷𝘂𝘀𝘁 𝗮𝗻 𝗲𝘅𝗮𝗺𝗽𝗹𝗲 𝗼𝗳 𝗮 𝗰𝗹𝗼𝗻𝗲 𝗰𝗹𝗶𝗲𝗻𝘁 𝗶𝗻 𝗣𝘆𝗿𝗼𝗴𝗿𝗮𝗺.
 
 ## Commands
 ```markdown
@@ -16,11 +16,11 @@ async def example_cmd(client: Client, message: Message):
     # Your command logic here
 ```
 
-__Note__: __This must be used to work.__
+𝗡𝗼𝘁𝗲: 𝗧𝗵𝗶𝘀 𝗺𝘂𝘀𝘁 𝗯𝗲 𝘂𝘀𝗲𝗱 𝘁𝗼 𝘄𝗼𝗿𝗸.
 
 ## Credits 🏅
 
 - [The Dark](https://t.me/IkariS0_0)
 - [Team X Devs](https://t.me/team_devsX)
 
-<b>Special thanks to [Zaid](https://t.me/Timesisnotwaiting) for the base.</b>
+𝗦𝗽𝗲𝗰𝗶𝗮𝗹 𝘁𝗵𝗮𝗻𝗸𝘀 𝘁𝗼 𝗳𝗼𝗿 𝘁𝗵𝗲 𝗯𝗮𝘀𝗲. [𝗜𝘁𝘇-𝗭𝗮𝗶𝗱](https://t.me/Timesisnotwaiting)
