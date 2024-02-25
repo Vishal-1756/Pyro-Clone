@@ -6,7 +6,7 @@ from Clone import API_ID, API_HASH
 import pyrogram
 
 @bot.on_message(filters.private & filters.command("bclone"))
-async def clone(bot: bot, msg: Message):
+async def bot_clone(bot: bot, msg: Message):
     chat = msg.chat
     cmd = msg.command
     try:
