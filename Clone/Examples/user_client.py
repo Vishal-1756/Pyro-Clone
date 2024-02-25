@@ -1,8 +1,8 @@
 import os
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from Barath import bot
-from Barath import API_ID, API_HASH
+from Clone import bot
+from Clone import API_ID, API_HASH
 import pyrogram
 
 @bot.on_message(filters.private & filters.command("uclone"))
@@ -19,7 +19,7 @@ async def clone(bot: bot, msg: Message):
     
     try:        
         # Change your root directory here
-        client = Client(":memory:", API_ID, API_HASH, session_string=SESSION, plugins={"root": "Barath"})
+        client = Client(":memory:", API_ID, API_HASH, session_string=SESSION, plugins={"root": "Clone"})
         await client.start()
         await pyrogram.idle()
         user = await client.get_me()
