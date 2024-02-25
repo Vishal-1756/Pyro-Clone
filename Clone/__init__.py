@@ -22,4 +22,4 @@ API_HASH = os.getenv("API_HASH")
 TOKEN = os.getenv("TOKEN")
 
 #PYROGRAM BOT CLIENT
-bot = Client(name="CloneBot", bot_token=TOKEN, api_id=API_ID, api_hash=API_HASH, plugins=dict(root="Clone"))
+bot = Client(name="CloneBot", bot_token=TOKEN, api_id=API_ID, api_hash=API_HASH, plugins=dict(root="Clone.Examples"))
