@@ -1,6 +1,8 @@
 from pyrogram import Client
 from pyrogram.types import Message
 from pyrogram import filters
+import time 
+from Clone import StartTime
 
 @Client.on_message(filters.private & filters.command("start"))
 async def start(client: Client, message: Message):
@@ -9,12 +11,12 @@ async def start(client: Client, message: Message):
 @Client.on_message(filters.command(["ping"]) & filters.me)
 async def ping_pong(client: Client, message: Message):
     start_time = time.time()
-    msg =  await message.reply_text("Ping...")
-    await msg.edit("✮ᑭｴƝGing...✮")
+    msg =  await message.reply_text("Checking Services...✅")
+    await msg.edit("Pinging Baby 🐥...")
     end_time = time.time()
     ping_time = round((end_time - start_time) * 1000, 3)
     uptime = get_readable_time((time.time() - StartTime))
-    await msg.edit(f"**I Aᴍ Aʟɪᴠᴇ Mᴀꜱᴛᴇʀ**\n⋙ 🔔 **ᑭｴƝG**: {ping_time}\n⋙ ⬆️ **ⴑⲢⲦⲒⲘⲈ**: {uptime}")
+    await msg.edit(f"**Service Ping Stats**\n⋙ 🎯 **Ping**: {ping_time}\n⋙ ⬆️ **Service Uptime**: {uptime}")
     try:
         await message.delete()
     except:
