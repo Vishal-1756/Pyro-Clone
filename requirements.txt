@@ -1,5 +1,5 @@
 pyrogram
-asyncio==3.4.3
-tgcrypto==1.2.5
+asyncio
+tgcrypto
 ffmpeg-python
-FFmpeg==1.4
+FFmpeg
