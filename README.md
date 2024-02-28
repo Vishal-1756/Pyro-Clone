@@ -26,3 +26,6 @@ async def example_cmd(client: Client, message: Message):
 𝗦𝗽𝗲𝗰𝗶𝗮𝗹 𝘁𝗵𝗮𝗻𝗸𝘀 𝘁𝗼 𝗳𝗼𝗿 𝘁𝗵𝗲 𝗯𝗮𝘀𝗲. [𝗜𝘁𝘇-𝗭𝗮𝗶𝗱](https://t.me/Timesisnotwaiting)
 
 [Test Bot](https://t.me/Nami_pro_Bot)
+
+
+This Method Use Ffmpeg For Storage U Must Be Have Installed ffmpeg in your environment 
