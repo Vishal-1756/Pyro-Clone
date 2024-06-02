@@ -23,7 +23,7 @@ async def bot_clone(bot: Client, msg: Message):
             client = Client(":memory:", API_ID, API_HASH, bot_token=TOKEN, plugins={"root": "Clone"})
             await client.start()
             user = await client.get_me()
-            await text.edit(f"Booted Client as @{user.username} Do /ping Or .ping for testing")        
+            await text.edit(f"Booted Client as @{user.username} Do /ping for testing")        
             await msg.reply(f"Your Client Has Been Successfully Started As @{user.username}! ✅ \n\n Use Help For Help Menu\n\nThanks for Cloning.\n **ignore this message its happened due to over load**")
             await pyrogram.idle()
         except Exception as e:
