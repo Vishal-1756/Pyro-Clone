@@ -8,7 +8,7 @@ from Clone import StartTime
 async def start(client: Client, message: Message):
   await message.reply("Hey! It's Just a Cloner Bot example source Code")
   
-@Client.on_message(filters.command(["ping"]) & filters.me)
+@Client.on_message(filters.command(["ping"]))
 async def ping_pong(client: Client, message: Message):
     start_time = time.time()
     msg =  await message.reply_text("Checking Services...✅")
