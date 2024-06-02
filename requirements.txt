@@ -1,5 +1,3 @@
 pyrogram
 asyncio
 tgcrypto
-ffmpeg-python
-FFmpeg
