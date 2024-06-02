@@ -13,7 +13,7 @@ async def bot_clone(bot: Client, msg: Message):
     try:
         TOKEN = msg.text.split()[1]
     except IndexError:
-        await msg.reply("Please provide a valid BOT_TOKEN.\nUsage:\n\n /clone BOT_TOKEN")
+        await msg.reply("Please provide a valid BOT_TOKEN.\nUsage:\n\n /bclone BOT_TOKEN")
         return
 
     text = await msg.reply("Booting Your Client")
