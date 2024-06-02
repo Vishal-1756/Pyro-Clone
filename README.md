@@ -18,11 +18,5 @@ async def example_cmd(client: Client, message: Message):
 
 𝗡𝗼𝘁𝗲: 𝗧𝗵𝗶𝘀 𝗺𝘂𝘀𝘁 𝗯𝗲 𝘂𝘀𝗲𝗱 𝘁𝗼 𝘄𝗼𝗿𝗸.
 
-## Credits 🏅
-
-- [The Dark](https://t.me/IkariS0_0)
-- [Team X Devs](https://t.me/team_devsX)
-
-[Test Bot](https://t.me/Nami_pro_Bot)
 
 
