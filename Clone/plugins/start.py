@@ -10,14 +10,8 @@ async def start(client: Client, message: Message):
   
 @Client.on_message(filters.command(["ping"]))
 async def ping_pong(client: Client, message: Message):
-    start_time = time.time()
-    msg =  await message.reply_text("Checking Services...✅")
-    await msg.edit("Pinging Baby 🐥...")
+    start_time = StartTime
+    lol = await message.reply_text('Pong!')
     end_time = time.time()
-    ping_time = round((end_time - start_time) * 1000, 3)
-    uptime = get_readable_time((time.time() - StartTime))
-    await msg.edit(f"**Service Ping Stats**\n⋙ 🎯 **Ping**: {ping_time}\n⋙ ⬆️ **Service Uptime**: {uptime}")
-    try:
-        await message.delete()
-    except:
-        return
+    elapsed_time = round((end_time - start_time) * 1000, 3)
+    await lol.edit_text(f'Pong! {elapsed_time}ms')
