@@ -23,8 +23,6 @@ async def example_cmd(client: Client, message: Message):
 - [The Dark](https://t.me/IkariS0_0)
 - [Team X Devs](https://t.me/team_devsX)
 
-𝗦𝗽𝗲𝗰𝗶𝗮𝗹 𝘁𝗵𝗮𝗻𝗸𝘀 𝘁𝗼 𝗳𝗼𝗿 𝘁𝗵𝗲 𝗯𝗮𝘀𝗲. [𝗜𝘁𝘇-𝗭𝗮𝗶𝗱](https://t.me/Timesisnotwaiting)
-
 [Test Bot](https://t.me/Nami_pro_Bot)
 
 
