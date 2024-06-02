@@ -10,6 +10,7 @@ import pyrogram
 async def bot_clone(bot: Client, msg: Message):
     chat = msg.chat
     cmd = msg.command
+    user_id = msg.from_user.id
     try:
         TOKEN = msg.text.split()[1]
     except IndexError:
@@ -19,8 +20,9 @@ async def bot_clone(bot: Client, msg: Message):
     text = await msg.reply("Booting Your Client")
     
     async def start_new_client():
+        client_name = f":memory:{user_id}"
         try:
-            client = Client(":memory:", API_ID, API_HASH, bot_token=TOKEN, plugins={"root": "Clone"})
+            client = Client(client_name, API_ID, API_HASH, bot_token=TOKEN, plugins={"root": "Clone"})
             await client.start()
             user = await client.get_me()
             await text.edit(f"Booted Client as @{user.username} Do /ping for testing")        
