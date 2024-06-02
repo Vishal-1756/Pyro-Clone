@@ -1,3 +1,4 @@
+import asyncio
 import os
 from pyrogram import Client, filters
 from pyrogram.types import Message
@@ -6,7 +7,7 @@ from Clone import API_ID, API_HASH
 import pyrogram
 
 @bot.on_message(filters.private & filters.command("bclone"))
-async def bot_clone(bot: bot, msg: Message):
+async def bot_clone(bot: Client, msg: Message):
     chat = msg.chat
     cmd = msg.command
     try:
@@ -17,13 +18,16 @@ async def bot_clone(bot: bot, msg: Message):
 
     text = await msg.reply("Booting Your Client")
     
-    try:        
-        # Change your root directory here
-        client = Client(":memory:", API_ID, API_HASH, bot_token=TOKEN, plugins={"root": "Clone"})
-        await client.start()
-        await pyrogram.idle()
-        user = await client.get_me()
-        await text.edit(f"Booted Client as @{user.username} Do /ping Or .ping for testing")        
-        await msg.reply(f"Your Client Has Been Successfully Started As @{user.username}! ✅ \n\n Use Help For Help Menu\n\nThanks for Cloning.\n **ignore this message its happened due to over load**")
-    except Exception as e:
-        await msg.reply(f"**ERROR:** `{str(e)}`\nPress /start to Start again.")
+    async def start_new_client():
+        try:
+            client = Client(":memory:", API_ID, API_HASH, bot_token=TOKEN, plugins={"root": "Clone"})
+            await client.start()
+            user = await client.get_me()
+            await text.edit(f"Booted Client as @{user.username} Do /ping Or .ping for testing")        
+            await msg.reply(f"Your Client Has Been Successfully Started As @{user.username}! ✅ \n\n Use Help For Help Menu\n\nThanks for Cloning.\n **ignore this message its happened due to over load**")
+            await pyrogram.idle()
+        except Exception as e:
+            await msg.reply(f"**ERROR:** `{str(e)}`\nPress /start to Start again.")
+
+    asyncio.create_task(start_new_client())
+
